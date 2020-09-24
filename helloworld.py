@@ -34,7 +34,7 @@ print("""
 ✯➣ ไทย ( Thailand )
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
 # first time login whit 4 PIN  
-client = LINE("email","password")
+client = LINE("panutchakorn_2533@hotmail.com","takumi2533")
 # copy authToken for bypass 4PIN in next time
 # client = LINE("authToken")
 clientMid = client.profile.mid
@@ -106,7 +106,7 @@ def shutdownBot():
 
 def logError(text):
     client.log("[ ERROR ] {}".format(str(text)))
-    tz = pytz.timezone("Asia/Jakarta")
+    tz = pytz.timezone("Asia/Bangkok")
     timeNow = datetime.now(tz=tz)
     timeHours = datetime.strftime(timeNow, "(%H:%M)")
     day = ["Sunday", "Monday", "Tuesday",
@@ -149,7 +149,7 @@ def delete_log():
 def sendMention(to, text="", mids=[]):
     arrData = ""
     arr = []
-    mention = "@zeroxyuuki "
+    mention = "@077ptuzy "
     if mids == []:
         raise Exception("Invalid mids")
     if "@!" in text:
@@ -256,7 +256,7 @@ def helpmessage():
                     "╠══[ Media Command ]" + "\n" + \
                     "╠ " + key + "InstaInfo 「UserName」" + "\n" + \
                     "╠ " + key + "SearchYoutube「Search」" + "\n" + \
-                    "╚══[ Copyright @xkrit.ti ]"
+                    "╚══[ Copyright @SKT ]"
     return helpMessage
 
 def clientBot(op):
@@ -288,7 +288,7 @@ def clientBot(op):
         if op.type == 17: 
             print("[ 17 ] MEMBER JOIN TO GROUP")
             if settings["notified"] == True:
-                client.sendMessage(op.param1,"ยินดีต้อนรับ " + client.getContact(op.param2).displayName + '\nแอดเพื่อน FoxTeam ก่อนสมัครเท่านั้น ' + '\n❗ถ้าแอดเพื่อนแล้วไม่ต้องแอดใหม่❗' + "\nhttps://lin.ee/jIGjdqe")
+                client.sendMessage(op.param1,"ยินดีต้อนรับ " + client.getContact(op.param2).displayName + '\nแอดเพื่อน SKT ก่อนสมัครเท่านั้น ' + '\n❗ถ้าแอดเพื่อนแล้วไม่ต้องแอดใหม่❗' + "\nhttps://lin.ee/jIGjdqe")
 
         if op.type in [22, 24]:
             print("[ 22 And 24 ] NOTIFIED INVITE INTO ROOM & NOTIFIED LEAVE ROOM")

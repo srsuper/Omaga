@@ -149,7 +149,7 @@ def delete_log():
 def sendMention(to, text="", mids=[]):
     arrData = ""
     arr = []
-    mention = "@077ptuzy "
+    mention = "@zeroxyuuki  "
     if mids == []:
         raise Exception("Invalid mids")
     if "@!" in text:
